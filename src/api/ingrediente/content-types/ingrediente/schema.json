@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredientes",
+  "info": {
+    "singularName": "ingrediente",
+    "pluralName": "ingredientes",
+    "displayName": "Ingrediente"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "cantidad": {
+      "type": "float"
+    },
+    "unidad": {
+      "type": "string"
+    },
+    "alerta_de_reposicion": {
+      "type": "float"
+    }
+  }
+}

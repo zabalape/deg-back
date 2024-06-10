@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ordens",
+  "info": {
+    "singularName": "orden",
+    "pluralName": "ordens",
+    "displayName": "Orden"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "cliente_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cliente.cliente"
+    },
+    "total": {
+      "type": "float"
+    },
+    "fecha": {
+      "type": "datetime"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "metodo_de_pago": {
+      "type": "string"
+    },
+    "pedidos": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::pedido.pedido",
+      "mappedBy": "orden_id"
+    },
+    "estado_de_pago_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::estado-de-pago.estado-de-pago",
+      "mappedBy": "orden_id"
+    }
+
+  }
+}

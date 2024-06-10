@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mercado_pagos",
+  "info": {
+    "singularName": "mercado-pago",
+    "pluralName": "mercado-pagos",
+    "displayName": "MercadoPago"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "pago_id": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "string"
+    },
+    "monto": {
+      "type": "decimal"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "fecha": {
+      "type": "datetime"
+    }
+  }
+}

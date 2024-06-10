@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "estado_de_pagos",
+  "info": {
+    "singularName": "estado-de-pago",
+    "pluralName": "estado-de-pagos",
+    "displayName": "estadoDePago",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "uid"
+    },
+    "estado": {
+      "type": "string"
+    },
+    "pago": {
+      "type": "boolean"
+    },
+    "metodo_de_pago": {
+      "type": "string"
+    },
+    "mp_alias": {
+      "type": "string"
+    },
+    "mp_status": {
+      "type": "string"
+    },
+    "orden_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::orden.orden",
+      "inversedBy": "estado_de_pago_id"
+    }
+  }
+}
